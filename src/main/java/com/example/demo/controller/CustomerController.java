@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RestController
+@RequestMapping("/customers")
 public class CustomerController {
 
 
@@ -18,10 +19,9 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @GetMapping(value = "/cs", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<CustomerDTO> getCustomer(){
-        CustomerDTO customer = customerService.getCustomer();
-        System.out.println(customer);
+    @GetMapping(value = "/{id}/customer", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<CustomerDTO> getCustomer(@PathVariable int id){
+        CustomerDTO customer = customerService.getCustomerById(id);
       return ResponseEntity.ok(customer);
     }
 
