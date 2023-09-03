@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/prod_db
+    username: "root"
+    password: "T4m4m2011"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # You can choose your preferred Hibernate DDL mode here
+    show-sql: true # Set this to true to see SQL queries in the console
+    database-platform: org.hibernate.dialect.MySQL8Dialect # Adjust the dialect based on your MySQL version
+
+
