@@ -1,7 +1,4 @@
 package com.example.demo.controller;
-
-import com.example.demo.entity.Customer;
-import com.example.demo.entity.Product;
 import com.example.demo.service.CustomerService;
 import com.example.demo.service.dto.CustomerDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +10,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/customers")
 public class CustomerController {
-
-
 
     @Autowired
     private CustomerService customerService;

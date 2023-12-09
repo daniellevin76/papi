@@ -17,7 +17,8 @@ public class CustomerService {
               .findById(id)
               .orElseThrow(() -> new RuntimeException("Customer with id " + id + " was not found"));
       return CustomerDTO.fromEntity(customer);
-
     }
+
+    
 }
 
